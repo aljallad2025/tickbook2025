@@ -15,6 +15,7 @@ import 'midtrans_controller.dart';
 import 'mercadopago_controller.dart';
 import 'authorizenet_controller.dart';
 import 'razorpay_controller.dart';
+import 'benefit_controller.dart';
 
 class PaymentControllerFactory {
   static IPaymentController? forGateway(PaymentGateway gateway) {
