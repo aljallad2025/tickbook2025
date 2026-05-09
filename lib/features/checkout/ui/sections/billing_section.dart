@@ -56,23 +56,12 @@ class BillingDetailsSection extends StatelessWidget {
                   const SizedBox(height: 4),
                   _ReadOnlyField(label: 'Phone', value: u.phone ?? ''),
                   const SizedBox(height: 4),
-                  _InputRow(
-                    children: [
-                      _ReadOnlyField(label: 'Country', value: u.country ?? ''),
-                    ],
+                  const SizedBox(height: 4),
+                  _ReadOnlyField(
+                    label: 'Address',
+                    value: u.address ?? '',
+                    lines: 3,
                   ),
-                  // const SizedBox(height: 4),
-                  // _InputRow(
-                  //   children: [
-                  //     _ReadOnlyField(label: 'City', value: u.city ?? ''),
-                  //   ],
-                  // ),
-                  // const SizedBox(height: 4),
-                  // _ReadOnlyField(
-                  //   label: 'Address',
-                  //   value: u.address ?? '',
-                  //   lines: 3,
-                  // ),
                 ],
               );
             }
@@ -110,32 +99,13 @@ class BillingDetailsSection extends StatelessWidget {
                   onChanged: (v) => vm.setRawField('phone', v),
                 ),
                 const SizedBox(height: 4),
-                _InputRow(
-                  children: [
-                    _EditableField(
-                      label: 'Country',
-                      initialValue: gv('country'),
-                      onChanged: (v) => vm.setRawField('country', v),
-                    ),
-                  ],
+                const SizedBox(height: 4),
+                _EditableField(
+                  label: 'Address',
+                  initialValue: gv('address'),
+                  lines: 3,
+                  onChanged: (v) => vm.setRawField('address', v),
                 ),
-                // const SizedBox(height: 4),
-                // _InputRow(
-                //   children: [
-                //     _EditableField(
-                //       label: 'City',
-                //       initialValue: gv('city'),
-                //       onChanged: (v) => vm.setRawField('city', v),
-                //     ),
-                //   ],
-                // ),
-                // const SizedBox(height: 4),
-                // _EditableField(
-                //   label: 'Address',
-                //   initialValue: gv('address'),
-                //   lines: 3,
-                //   onChanged: (v) => vm.setRawField('address', v),
-                // ),
               ],
             );
           },
