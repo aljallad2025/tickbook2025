@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "971585536390",
+    "project_id": "ticbook-e7934",
+    "storage_bucket": "ticbook-e7934.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971585536390:android:3c394825587d8ccc542c07",
+        "android_client_info": {
+          "package_name": "com.tic.ticbookapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971585536390-rqjppkqkaeokp4ph6b9tliqcbepvqsln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8YAC_h-sU2ejTttZHKJwLM7hKq6K9ZnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971585536390-rqjppkqkaeokp4ph6b9tliqcbepvqsln.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "971585536390-c6h0cunctjr1cuci2rsqk05rqqvimgff.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tic.ticbookapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971585536390:android:39cfcd16f7436840542c07",
+        "android_client_info": {
+          "package_name": "com.ticbook.ticbookapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971585536390-rqjppkqkaeokp4ph6b9tliqcbepvqsln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8YAC_h-sU2ejTttZHKJwLM7hKq6K9ZnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971585536390-rqjppkqkaeokp4ph6b9tliqcbepvqsln.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "971585536390-c6h0cunctjr1cuci2rsqk05rqqvimgff.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tic.ticbookapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
