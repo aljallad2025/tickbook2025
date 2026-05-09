@@ -50,6 +50,8 @@ class PaymentControllerFactory {
         return AuthorizeNetController();
       case PaymentGateway.razorpay:
         return RazorpayController();
+      case PaymentGateway.benefit:
+        return BenefitController();
       case PaymentGateway.offline:
         return null;
     }

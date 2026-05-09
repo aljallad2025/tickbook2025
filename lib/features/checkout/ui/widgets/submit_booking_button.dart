@@ -91,6 +91,8 @@ class SubmitBookingButton extends StatelessWidget {
         return 'Pay with Authorize.Net & Book';
       case PaymentGateway.razorpay:
         return 'Pay with Razorpay & Book';
+      case PaymentGateway.benefit:
+        return 'Pay with Benefit';
     }
   }
 }
