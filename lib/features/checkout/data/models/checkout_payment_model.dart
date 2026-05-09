@@ -57,6 +57,8 @@ class CheckoutPaymentModel {
         return 'authorizenet';
       case PaymentGateway.razorpay:
         return 'razorpay';
+      case PaymentGateway.benefit:
+        return 'benefit';
       case PaymentGateway.offline:
         return 'offline';
     }
@@ -98,6 +100,9 @@ class CheckoutPaymentModel {
         return PaymentGateway.authorizeNet;
       case 'razorpay':
         return PaymentGateway.razorpay;
+      case 'benefit':
+      case 'benefitpay':
+        return PaymentGateway.benefit;
       default:
         return null;
     }

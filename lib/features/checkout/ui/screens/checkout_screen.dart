@@ -32,6 +32,7 @@ enum PaymentGateway {
   mercadopago,
   authorizeNet,
   razorpay,
+  benefit,
 }
 
 class CheckoutScreen extends StatelessWidget {
