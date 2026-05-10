@@ -124,7 +124,6 @@ class EventCard extends StatelessWidget {
                             ),
                             child: Text('Tick', style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600)),
                           ),
-                          ),
                         ],
                       ),
                     ],
