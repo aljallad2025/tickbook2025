@@ -32,7 +32,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
         systemNavigationBarIconBrightness: Brightness.dark,
       ),
       titleSpacing: 16,
-      title: Image.asset('assets/images/logo_black.png', height: 30, fit: BoxFit.contain),
+      title: Image.asset('assets/images/logo_black.png', height: 50, fit: BoxFit.contain),
       actions: [
         Stack(
           alignment: Alignment.center,
@@ -129,3 +129,4 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 }
+

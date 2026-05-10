@@ -77,6 +77,10 @@ class CheckoutProvider extends ChangeNotifier {
       _ticketFields[ticketKey] = {};
     }
     _ticketFields[ticketKey]![field] = value;
+    // Auto-sync ticket_1 nationality to billing country
+    if (ticketKey == 'ticket_1' && field == 'nationality' && value.isNotEmpty) {
+      _rawData['country'] = value;
+    }
     notifyListeners();
   }
 
@@ -432,3 +436,4 @@ class CheckoutProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
+
