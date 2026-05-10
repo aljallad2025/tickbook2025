@@ -371,7 +371,7 @@ class _TicketCardState extends State<_TicketCard> {
             _buildDateField(),
             const SizedBox(height: 12),
 
-            // Nationality
+                          // Nationality
               _buildTextField(
                 label: 'Nationality',
                 controller: _nationalityController,
