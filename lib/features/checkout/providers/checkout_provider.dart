@@ -115,6 +115,7 @@ class CheckoutProvider extends ChangeNotifier {
         'gender': fields['gender'] ?? '',
         'dob': fields['dob'] ?? '',
         'nationality': fields['nationality'] ?? '',
+        'address': fields['address'] ?? '',
       });
     });
 
