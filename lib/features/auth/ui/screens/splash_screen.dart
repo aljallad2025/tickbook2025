@@ -192,7 +192,7 @@ class _LogoWithGlow extends StatelessWidget {
           SizedBox(height: 48),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [NetworkAppLogo(height: 150, type: 'logo')],
+            children: [Image.asset('assets/images/logo_black.png', height: 150, fit: BoxFit.contain)],
           ),
 
           Spacer(),
