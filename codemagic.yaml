@@ -4,11 +4,18 @@ workflows:
     max_build_duration: 60
     environment:
       flutter: stable
+      groups:
+        - android_signing
     scripts:
       - name: Get packages
         script: flutter pub get
       - name: Build APK
-        script: flutter build apk --release
+        script: |
+          flutter build apk --release \
+            --dart-define=CM_KEYSTORE=$CM_KEYSTORE \
+            --dart-define=CM_KEY_ALIAS=$CM_KEY_ALIAS \
+            --dart-define=CM_KEY_PASSWORD=$CM_KEY_PASSWORD \
+            --dart-define=CM_STORE_PASSWORD=$CM_STORE_PASSWORD
       - name: Build AAB
         script: flutter build appbundle --release
     artifacts:
