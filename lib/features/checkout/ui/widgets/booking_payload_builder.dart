@@ -87,7 +87,7 @@ class BookingPayloadBuilder {
       'lname': customer?.lname ?? data['lname'],
       'email': customer?.email ?? data['email'],
       'phone': customer?.phone ?? data['phone'],
-      'country': customer?.country ?? data['country'],
+      'country': () { final c = (customer?.country ?? data['country'] ?? '').toString().trim(); return c.isNotEmpty ? c : 'BH'; }(),
       'city': customer?.city ?? data['city'],
       'state': customer?.state ?? data['state'],
       'zip_code': customer?.zipCode ?? data['zip_code'],
@@ -180,3 +180,4 @@ class BookingPayloadBuilder {
     return payload;
   }
 }
+

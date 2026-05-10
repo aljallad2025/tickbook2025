@@ -363,7 +363,7 @@ Future<Map<String, dynamic>> verifyAndBuildCheckoutPayload({
     'lname': customer?.lname ?? '',
     'email': customer?.email ?? '',
     'phone': customer?.phone ?? '',
-    'country': customer?.country ?? '',
+    'country': (customer?.country ?? '').isNotEmpty ? customer!.country! : 'BH',
     'state': customer?.state ?? '',
     'city': customer?.city ?? '',
     'zip_code': customer?.zipCode ?? '',
@@ -383,3 +383,4 @@ Future<Map<String, dynamic>> verifyAndBuildCheckoutPayload({
 
   return payload;
 }
+
