@@ -112,16 +112,18 @@ class EventCard extends StatelessWidget {
                             ),
                             textDirection: TextDirection.ltr,
                           ),
-                          Flexible(
-                            child: Text(
-                              'Tickets Available'.tr,
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontSize: 14,
-                                color: Colors.green.shade600,
-                                fontWeight: FontWeight.w600,
-                              ),
+                          ElevatedButton(
+                            onPressed: () {
+                              final id = int.tryParse(event.id) ?? 0;
+                              NavigationService.pushAnimated(EventDetailsScreen(eventId: id));
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: AppColors.primaryColor,
+                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                             ),
+                            child: Text('Tick', style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600)),
+                          ),
                           ),
                         ],
                       ),
