@@ -60,14 +60,7 @@ class _NetworkAppLogoState extends State<NetworkAppLogo> {
   Widget build(BuildContext context) {
     final String fallback = _getFallbackAsset();
 
-    if (_bytes != null && _bytes!.isNotEmpty) {
-      return Image.memory(
-        _bytes!,
-        width: widget.width,
-        height: widget.height,
-        fit: BoxFit.contain,
-      );
-    }
+    
 
     return Image.asset(
       fallback,
