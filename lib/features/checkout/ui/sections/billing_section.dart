@@ -163,14 +163,14 @@ class _TicketCardState extends State<_TicketCard> {
   String _fullName = '';
   String _email = '';
   String _phone = '';
-  String _nationality = '';
+  String _nationality = '';\n    String _address = '';
   String? _gender;
   DateTime? _dob;
 
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
-  final TextEditingController _nationalityController = TextEditingController();
+  final TextEditingController _addressController = TextEditingController();\n    final TextEditingController _nationalityController = TextEditingController();
   final TextEditingController _dobController = TextEditingController();
 
   @override
@@ -193,7 +193,7 @@ class _TicketCardState extends State<_TicketCard> {
     _nameController.dispose();
     _emailController.dispose();
     _phoneController.dispose();
-    _nationalityController.dispose();
+    _nationalityController.dispose();\n      _addressController.dispose();
     _dobController.dispose();
     super.dispose();
   }
@@ -256,7 +256,7 @@ class _TicketCardState extends State<_TicketCard> {
     widget.vm.setTicketField(ticketKey, 'full_name', _fullName);
     widget.vm.setTicketField(ticketKey, 'email', _email);
     widget.vm.setTicketField(ticketKey, 'phone', _phone);
-    widget.vm.setTicketField(ticketKey, 'nationality', _nationality);
+    widget.vm.setTicketField(ticketKey, 'nationality', _nationality);\n    widget.vm.setTicketField(ticketKey, 'address', _address);
     widget.vm.setTicketField(ticketKey, 'gender', _gender ?? '');
     widget.vm.setTicketField(
       ticketKey,
@@ -368,15 +368,25 @@ class _TicketCardState extends State<_TicketCard> {
             const SizedBox(height: 12),
 
             // Nationality
-            _buildTextField(
-              label: 'Nationality',
-              controller: _nationalityController,
-              readOnly: _isForMe && isLoggedIn,
-              onChanged: (value) {
-                _nationality = value;
-                _updateTicketData();
-              },
-            ),
+              _buildTextField(
+                label: 'Nationality',
+                controller: _nationalityController,
+                readOnly: _isForMe && isLoggedIn,
+                onChanged: (value) {
+                  _nationality = value;
+                  _updateTicketData();
+                },
+              ),
+              const SizedBox(height: 12),
+              // Address
+              _buildTextField(
+                label: 'Address',
+                controller: _addressController,
+                onChanged: (value) {
+                  _address = value;
+                  _updateTicketData();
+                },
+              ),
           ],
         ),
       ),
