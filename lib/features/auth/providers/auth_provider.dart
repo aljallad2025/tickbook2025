@@ -269,7 +269,7 @@ class AuthProvider extends ChangeNotifier {
             }
           }
         }
-        _errorMessage = msg ?? 'Signup failed';
+        _errorMessage = msg ?? res.toString();
         developer.log('Signup failed - status: $status, message: $_errorMessage', name: _tag);
         _setLoading(false);
         return false;
@@ -291,3 +291,4 @@ class AuthProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
+
