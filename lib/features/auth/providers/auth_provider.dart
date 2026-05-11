@@ -96,8 +96,7 @@ class AuthProvider extends ChangeNotifier {
       developer.log('Login response received: ${res.keys.toList()}', name: _tag);
 
       final token = res['token']?.toString();
-      final customerRaw = res['customer'];
-      final customer = customerRaw is Map ? Map<String, dynamic>.from(customerRaw) : null;
+      final customerRaw = res['customer']; final customer = customerRaw is Map ? Map<String, dynamic>.from(customerRaw) : null;
 
       if (token == null || customer == null) {
         _errorMessage = 'Invalid response from server';
@@ -292,6 +291,8 @@ class AuthProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
+
+
 
 
 
