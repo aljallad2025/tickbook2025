@@ -323,7 +323,7 @@ class _TicketCardState extends State<_TicketCard> {
             _buildTextField(
               label: 'Full Name',
               controller: _nameController,
-              readOnly: _isForMe && isLoggedIn,
+              readOnly: false,
               onChanged: (value) {
                 _fullName = value;
                 _updateTicketData();
@@ -342,7 +342,7 @@ class _TicketCardState extends State<_TicketCard> {
                   child: _buildTextField(
                     label: 'Email',
                     controller: _emailController,
-                    readOnly: _isForMe && isLoggedIn,
+                    readOnly: false,
                     keyboardType: TextInputType.emailAddress,
                     onChanged: (value) {
                       _email = value;
@@ -355,7 +355,7 @@ class _TicketCardState extends State<_TicketCard> {
                   child: _buildTextField(
                     label: 'Phone',
                     controller: _phoneController,
-                    readOnly: _isForMe && isLoggedIn,
+                    readOnly: false,
                     keyboardType: TextInputType.phone,
                     onChanged: (value) {
                       _phone = value;
@@ -375,7 +375,7 @@ class _TicketCardState extends State<_TicketCard> {
               _buildTextField(
                 label: 'Nationality',
                 controller: _nationalityController,
-                readOnly: _isForMe && isLoggedIn,
+                readOnly: false,
                 onChanged: (value) {
                   _nationality = value;
                   _updateTicketData();
@@ -652,3 +652,4 @@ class _EditableField extends StatelessWidget {
     );
   }
 }
+

@@ -256,7 +256,7 @@ class AuthProvider extends ChangeNotifier {
 
       final status = (res['status'] ?? '').toString().toLowerCase();
 
-      if (status != 'success') {
+      if (status != 'success' && res['success'] != true) {
         String? msg;
         if (res['message'] is String) msg = res['message'];
         if (msg == null && res['errors'] is Map) {
@@ -292,6 +292,9 @@ class AuthProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
+
+
+
 
 
 
