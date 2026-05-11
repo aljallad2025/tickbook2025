@@ -170,7 +170,7 @@ class SignUpScreen extends StatelessWidget {
     final ok = await auth.signup();
     if (!context.mounted) return;
     if (ok) {
-      Navigator.pushReplacementNamed(context, AppRoutes.signup);
+      Navigator.pushReplacementNamed(context, AppRoutes.login);
     }
   }
 
@@ -188,3 +188,4 @@ class SignUpScreen extends StatelessWidget {
     );
   }
 }
+

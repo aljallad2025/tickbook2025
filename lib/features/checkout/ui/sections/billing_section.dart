@@ -448,7 +448,7 @@ class _TicketCardState extends State<_TicketCard> {
 
   Widget _buildGenderField() {
     final isLoggedIn = widget.auth.customerModel != null;
-    final isDisabled = _isForMe && isLoggedIn;
+    final isDisabled = false;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -499,7 +499,7 @@ class _TicketCardState extends State<_TicketCard> {
 
   Widget _buildDateField() {
     final isLoggedIn = widget.auth.customerModel != null;
-    final isDisabled = _isForMe && isLoggedIn;
+    final isDisabled = false;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -652,4 +652,6 @@ class _EditableField extends StatelessWidget {
     );
   }
 }
+
+
 
