@@ -97,7 +97,7 @@ class AuthServices {
     }
     final map = Map<String, dynamic>.from(decoded);
 
-    if (response.statusCode != 200) {
+    if (response.statusCode != 200 && response.statusCode != 201) {
       return {
         'status': 'error',
         'message': map['message']?.toString() ?? 'HTTP ${response.statusCode}',
