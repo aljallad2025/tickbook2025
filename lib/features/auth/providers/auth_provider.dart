@@ -96,7 +96,8 @@ class AuthProvider extends ChangeNotifier {
       developer.log('Login response received: ${res.keys.toList()}', name: _tag);
 
       final token = res['token']?.toString();
-      final customer = res['customer'] as Map<String, dynamic>?;
+      final customerRaw = res['customer'];
+      final customer = customerRaw is Map ? Map<String, dynamic>.from(customerRaw) : null;
 
       if (token == null || customer == null) {
         _errorMessage = 'Invalid response from server';
@@ -269,7 +270,7 @@ class AuthProvider extends ChangeNotifier {
             }
           }
         }
-        _errorMessage = msg ?? res.toString();
+        _errorMessage = msg ?? (res['errors'] != null ? res['errors'].toString() : 'Signup failed');
         developer.log('Signup failed - status: $status, message: $_errorMessage', name: _tag);
         _setLoading(false);
         return false;
@@ -291,4 +292,7 @@ class AuthProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
+
+
+
 
